@@ -1,89 +1,49 @@
 body {
   margin: 0;
-  overflow: hidden;
   font-family: 'Brush Script MT', cursive;
   background: linear-gradient(to bottom, #ffd6f6, #000);
+  overflow: hidden;
 }
 
-.start-screen {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom, #ffd6f6, #000);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  z-index: 10;
-}
-
-.start-text {
-  font-size: 2.5rem;
-  color: white;
-  text-shadow: 0 0 20px pink;
-}
-
-.hidden {
+.page {
   display: none;
-}
-
-.container {
-  position: relative;
   width: 100vw;
   height: 100vh;
-}
-
-.frame {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  display: flex;
   justify-content: center;
   align-items: center;
-  transition: opacity 1s ease;
+  flex-direction: column;
+  text-align: center;
 }
 
-.frame.active {
-  opacity: 1;
-}
-
-.char {
-  width: 300px;
-  position: absolute;
-  animation: slowZoom 2s ease forwards;
-}
-
-.left {
-  left: 15%;
-}
-
-.right {
-  right: 15%;
-}
-
-@keyframes slowZoom {
-  from { transform: scale(1); }
-  to { transform: scale(1.05); }
-}
-
-.final-frame {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
+.page.active {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: opacity 2s ease;
 }
 
-.final-frame.active {
-  opacity: 1;
+.start {
+  cursor: pointer;
+  font-size: 3rem;
+  color: white;
 }
 
-.final-text {
-  font-size: 4rem;
-  color: #ff8bdc;
-  text-shadow: 0 0 30px white;
+.couple-img {
+  width: 350px;
+  margin-bottom: 20px;
+}
+
+.text-box {
+  max-width: 400px;
+  color: white;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: pink;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.char-section img {
+  width: 280px;
 }
