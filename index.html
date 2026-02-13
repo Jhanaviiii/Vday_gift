@@ -13,59 +13,84 @@
 
 <body>
 
+<div class="hearts"></div>
+
 <div class="slider">
 
+  <!-- PAGE 1 -->
   <div class="page start" onclick="nextPage()">
     <h1>tap to start 💗</h1>
   </div>
 
+  <!-- PAGE 2 -->
   <div class="page intro">
-    <img src="assets/couple.png" class="couple-img">
-    <h2>this is us.</h2>
-    <p>chaotic + calm. pink energy meets black hoodie softness.</p>
-    <button onclick="nextPage()">next →</button>
+    <img src="assets/couple.png" class="couple-img fade-in">
+    <div class="glass">
+      <h2>this is us.</h2>
+      <p>
+        fun fact: i'm obviously the funny and cute one.<br><br>
+        he just rage baits me constantly and pretends he's mean.<br><br>
+        but somehow… he still stays.
+      </p>
+    </div>
+    <button class="next-btn" onclick="nextPage()">→</button>
   </div>
 
-  <div class="page you-page">
-    <img src="assets/you_bounce.png" class="char">
-    <h2>her.</h2>
-    <p>
-      ✨ high energy<br>
-      ✨ professional yapper<br>
-      ✨ randomly dances<br>
-      ✨ dramatic but soft<br>
-      ✨ pink coded
-    </p>
-    <button onclick="nextPage()">next →</button>
+  <!-- PAGE 3 -->
+  <div class="page you-him">
+    <div class="glass">
+      <h2>her.</h2>
+      <p>
+        ✨ professional yapper<br>
+        ✨ dances randomly<br>
+        ✨ dramatic but soft<br>
+        ✨ pink coded chaos
+      </p>
+
+      <h2 style="margin-top:30px;">him.</h2>
+      <p>
+        🖤 gym guy energy<br>
+        🏀 basketball main character<br>
+        🖤 acts mean but jealous<br>
+        🖤 biggest teddy bear
+      </p>
+    </div>
+    <button class="next-btn" onclick="nextPage()">→</button>
   </div>
 
-  <div class="page him-page">
-    <img src="assets/him_beanie_idle.png" class="char">
-    <h2>him.</h2>
-    <p>
-      🖤 gym guy energy<br>
-      🏀 basketball main character<br>
-      🖤 protective but shy<br>
-      🖤 gets jealous but pretends he doesn’t<br>
-      🖤 biggest teddy bear
-    </p>
-    <button onclick="nextPage()">next →</button>
+  <!-- PAGE 4 -->
+  <div class="page quiz-intro">
+    <div class="glass">
+      <h2>complete this quiz correctly.</h2>
+      <p>
+        answer all 3 correctly…<br>
+        and you get your valentine's gift 💌
+      </p>
+    </div>
+    <button class="next-btn" onclick="startQuiz()">start →</button>
   </div>
 
+  <!-- PAGE 5 QUIZ -->
   <div class="page quiz-page">
-    <h2>quick quiz 💌</h2>
-    <p>what does she do when she's bored?</p>
-    <button onclick="alert('correct. always dancing.')">dance randomly</button>
-    <button onclick="alert('wrong but cute guess.')">sleep</button>
-    <button onclick="alert('she does overthink but dancing wins.')">overthink</button>
-    <button onclick="nextPage()">skip →</button>
+    <div class="glass" id="quizContainer">
+      <!-- JS inserts questions -->
+    </div>
   </div>
 
-  <div class="page final">
-    <img src="assets/couple.png" class="couple-img">
-    <h1>always your bbg</h1>
-  </div>
+</div>
 
+<!-- POPUP -->
+<div id="popup" class="popup hidden">
+  <div class="popup-content">
+    <img src="assets/us.png" class="popup-img">
+    <h2>happy valentine's day 💗</h2>
+    <p>
+      we are chaos + calm.<br>
+      we argue. we laugh. we rage bait.<br>
+      but we still choose each other.
+    </p>
+    <button onclick="closePopup()">close</button>
+  </div>
 </div>
 
 <script src="script.js"></script>
