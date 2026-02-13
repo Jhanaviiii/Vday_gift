@@ -8,33 +8,35 @@
 </head>
 <body>
 
-<div class="overlay">
+<div class="start-screen" onclick="startExperience()">
+  <div class="start-text">tap to start 💗</div>
+</div>
 
-  <div class="scene active" id="scene1">
-    <div class="text handwritten">love me not...</div>
-    <div class="characters">
-      <img id="you" src="assets/you_idle.png" class="you">
-      <img id="him" src="assets/him_beanie_idle.png" class="him">
-    </div>
+<audio id="bgMusic" src="assets/love.mp3"></audio>
+
+<div class="container hidden">
+
+  <div class="frame active">
+    <img src="assets/you_idle.png" class="char left">
+    <img src="assets/him_beanie_laugh.png" class="char right">
   </div>
 
-  <div class="scene" id="scene2">
-    <div class="text handwritten">if you love me...</div>
-    <div class="characters">
-      <img id="you2" src="assets/you_bounce.png" class="you">
-      <img id="him2" src="assets/him_beanie_laugh.png" class="him">
-    </div>
+  <div class="frame">
+    <img src="assets/you_bounce.png" class="char left">
+    <img src="assets/him_beanie_laugh.png" class="char right">
   </div>
 
-  <div class="scene" id="scene3">
-    <div class="text handwritten">then show me.</div>
-    <div class="characters">
-      <img id="you3" src="assets/you_spin.png" class="you">
-      <img id="him3" src="assets/him_bandana_smile.png" class="him">
-    </div>
+  <div class="frame">
+    <img src="assets/you_spin.png" class="char left">
+    <img src="assets/him_bandana_smile.png" class="char right">
   </div>
 
-  <div class="scene final">
+  <div class="frame">
+    <img src="assets/you_jump.png" class="char left">
+    <img src="assets/him_bandana_smile.png" class="char right">
+  </div>
+
+  <div class="final-frame">
     <div class="final-text">always your bbg</div>
   </div>
 
@@ -42,4 +44,5 @@
 
 <script src="script.js"></script>
 </body>
+
 </html>
