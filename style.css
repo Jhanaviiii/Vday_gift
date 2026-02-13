@@ -1,9 +1,9 @@
 body {
   margin: 0;
-  overflow: hidden;
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(to bottom, #ffd6f6, #000);
   color: white;
+  overflow-x: hidden;
 }
 
 .slider {
@@ -23,7 +23,9 @@ body {
   flex-direction: column;
   position: relative;
   text-align: center;
-  padding: 20px;
+  padding: 40px;
+  box-sizing: border-box;
+  overflow-y: auto; /* allow internal scroll if needed */
 }
 
 .start h1 {
@@ -34,9 +36,9 @@ body {
 
 .next-btn {
   position: absolute;
-  bottom: 30px;
-  right: 40px;
-  padding: 10px 20px;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px 22px;
   border-radius: 20px;
   background: #ff8bdc;
   border: none;
@@ -46,36 +48,42 @@ body {
 }
 
 .couple-img {
-  width: 500px;
+  width: 420px;
   max-width: 90%;
   margin-bottom: 20px;
-  filter: drop-shadow(0 0 25px rgba(255,150,220,0.6));
 }
 
 .glass {
   backdrop-filter: blur(12px);
-  background: rgba(255,255,255,0.08);
-  padding: 30px;
+  background: rgba(255,255,255,0.12);
+  padding: 25px;
   border-radius: 20px;
-  max-width: 550px;
+  max-width: 600px;
 }
 
 .intro-layout {
   display: flex;
   align-items: center;
-  gap: 30px;
-  margin-bottom: 40px;
+  gap: 25px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .mini-char {
-  width: 150px;
+  width: 130px;
+}
+
+.quiz-page .glass {
+  width: 100%;
+  max-width: 500px;
 }
 
 .quiz-page button {
   display: block;
   width: 100%;
-  margin: 10px 0;
-  padding: 12px;
+  margin: 12px 0;
+  padding: 14px;
   border-radius: 15px;
   background: #ff8bdc;
   border: none;
@@ -86,19 +94,19 @@ body {
 
 .letter {
   background: linear-gradient(145deg, #fff0f8, #ffd6f6);
-  padding: 40px;
+  padding: 35px;
   border-radius: 25px;
   text-align: center;
-  width: 550px;
-  max-width: 90%;
+  width: 500px;
+  max-width: 95%;
   border: 3px solid #ff8bdc;
   box-shadow: 0 0 40px rgba(255, 150, 220, 0.7);
   color: #5a0033;
 }
 
 .letter-img {
-  width: 250px;
-  margin: 20px 0;
+  width: 220px;
+  margin: 15px 0;
   border-radius: 20px;
 }
 
@@ -119,7 +127,7 @@ body {
   position: absolute;
   width: 200%;
   animation: floatHearts 15s linear infinite;
-  opacity: 0.15;
+  opacity: 0.12;
 }
 
 @keyframes floatHearts {
