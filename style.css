@@ -1,33 +1,111 @@
 body {
   margin: 0;
   overflow: hidden;
-  background: linear-gradient(to bottom, #ffd6f6, #000);
   font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom, #ffd6f6, #000);
+  color: white;
 }
 
-h1, h2 {
-  font-family: 'Playfair Display', serif;
+.slider {
+  display: flex;
+  width: 500vw;
+  height: 100vh;
+  transition: transform 0.8s ease;
 }
 
-.intro {
-  padding: 40px;
+.page {
+  width: 100vw;
+  height: 100vh;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.next-btn {
+  position: absolute;
+  bottom: 30px;
+  right: 40px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background: #ff8bdc;
+  border: none;
+  cursor: pointer;
 }
 
 .couple-img {
-  width: 480px;  /* BIGGER IMAGE */
+  width: 500px;
   max-width: 85%;
-  margin-bottom: 30px;
-  filter: drop-shadow(0 0 20px rgba(255, 150, 220, 0.6));
+  margin-bottom: 20px;
 }
 
-.intro h2 {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
-}
-
-.intro p {
-  font-size: 1.2rem;
+.glass {
+  backdrop-filter: blur(12px);
+  background: rgba(255,255,255,0.08);
+  padding: 30px;
+  border-radius: 20px;
   max-width: 500px;
-  line-height: 1.6;
-  opacity: 0.9;
+  text-align: center;
+}
+
+.fade-in {
+  animation: fadeIn 1.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* HEART PARTICLES */
+.hearts {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.hearts::before,
+.hearts::after {
+  content: "💗 💕 💖 💓 💞";
+  position: absolute;
+  width: 200%;
+  animation: floatHearts 15s linear infinite;
+  opacity: 0.15;
+}
+
+@keyframes floatHearts {
+  from { transform: translateY(100vh); }
+  to { transform: translateY(-100vh); }
+}
+
+/* POPUP */
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background: #111;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 400px;
+}
+
+.popup-img {
+  width: 250px;
+  margin-bottom: 20px;
+}
+
+.hidden {
+  display: none;
 }
