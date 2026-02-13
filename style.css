@@ -1,48 +1,33 @@
 body {
   margin: 0;
   overflow: hidden;
-  font-family: 'Brush Script MT', cursive;
   background: linear-gradient(to bottom, #ffd6f6, #000);
+  font-family: 'Poppins', sans-serif;
 }
 
-.slider {
-  display: flex;
-  width: 600vw; /* 6 pages */
-  height: 100vh;
-  transition: transform 0.8s ease-in-out;
+h1, h2 {
+  font-family: 'Playfair Display', serif;
 }
 
-.page {
-  width: 100vw;
-  height: 100vh;
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-h1, h2, p {
-  color: white;
+.intro {
+  padding: 40px;
 }
 
 .couple-img {
-  width: 350px;
-  margin-bottom: 20px;
+  width: 480px;  /* BIGGER IMAGE */
+  max-width: 85%;
+  margin-bottom: 30px;
+  filter: drop-shadow(0 0 20px rgba(255, 150, 220, 0.6));
 }
 
-.char {
-  width: 280px;
-  margin-bottom: 20px;
+.intro h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
 }
 
-button {
-  margin-top: 20px;
-  padding: 12px 25px;
-  background: #ff8bdc;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  font-size: 1rem;
+.intro p {
+  font-size: 1.2rem;
+  max-width: 500px;
+  line-height: 1.6;
+  opacity: 0.9;
 }
