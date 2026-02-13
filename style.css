@@ -33,45 +33,35 @@ body {
 
 .text {
   position: absolute;
-  top: 5%;
-  font-size: 2rem;
+  top: 6%;
+  font-size: 2.2rem;
   color: white;
-  text-shadow: 0 0 15px pink;
+  text-shadow: 0 0 20px #ff8bdc;
+  letter-spacing: 2px;
 }
 
 .characters {
   position: relative;
   display: flex;
-  gap: 60px;
+  gap: 100px;
   align-items: flex-end;
+  justify-content: center;
 }
 
-.you {
-  width: 220px;
-  animation: dance 2s infinite ease-in-out;
+.you, .him {
+  width: 260px;
+  transition: transform 0.3s ease;
 }
 
-.him {
-  width: 240px;
-  animation: laugh 3s infinite ease-in-out;
-}
-
-@keyframes dance {
-  0% { transform: translateY(0) rotate(-3deg); }
-  25% { transform: translateY(-15px) rotate(5deg); }
-  50% { transform: translateY(0) rotate(-5deg); }
-  75% { transform: translateY(-10px) rotate(3deg); }
-  100% { transform: translateY(0) rotate(-3deg); }
-}
-
-@keyframes laugh {
-  0% { transform: rotate(0deg); }
-  50% { transform: rotate(3deg); }
-  100% { transform: rotate(0deg); }
-}
-
+/* Final text styling */
 .final-text {
-  font-size: 3rem;
-  color: pink;
-  text-shadow: 0 0 20px white;
+  font-size: 3.5rem;
+  color: #ff8bdc;
+  text-shadow: 0 0 25px white;
+  animation: fadeIn 2s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
