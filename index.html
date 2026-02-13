@@ -6,10 +6,8 @@
   <title>Vday Gift 💗</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="style.css">
 </head>
-
 
 <body>
 
@@ -22,75 +20,68 @@
     <h1>tap to start 💗</h1>
   </div>
 
-  <!-- PAGE 2 -->
+  <!-- PAGE 2 INTRO -->
   <div class="page intro">
-    <img src="assets/couple.png" class="couple-img fade-in">
-    <div class="glass">
-      <h2>this is us.</h2>
-      <p>
-        fun fact: i'm obviously the funny and cute one.<br><br>
-        he just rage baits me constantly and pretends he's mean.<br><br>
-        but somehow… he still stays.
-      </p>
+    <div class="intro-layout">
+      <img src="assets/you_bounce.png" class="mini-char">
+      <div class="glass">
+        <h2>her.</h2>
+        <p>
+          she is basically a walking pink notification.
+          talks non-stop. dances randomly.
+          will argue and then send you memes 2 minutes later.
+          dramatic? yes. soft? also yes.
+        </p>
+      </div>
     </div>
+
+    <div class="intro-layout">
+      <img src="assets/him_beanie_idle.png" class="mini-char">
+      <div class="glass">
+        <h2>him.</h2>
+        <p>
+          acts mean. rage baits professionally.
+          gym guy energy but secretly wants attention.
+          protective. slightly jealous.
+          biggest teddy bear in disguise.
+        </p>
+      </div>
+    </div>
+
     <button class="next-btn" onclick="nextPage()">→</button>
   </div>
 
-  <!-- PAGE 3 -->
-  <div class="page you-him">
-    <div class="glass">
-      <h2>her.</h2>
-      <p>
-        ✨ professional yapper<br>
-        ✨ dances randomly<br>
-        ✨ dramatic but soft<br>
-        ✨ pink coded chaos
-      </p>
-
-      <h2 style="margin-top:30px;">him.</h2>
-      <p>
-        🖤 gym guy energy<br>
-        🏀 basketball main character<br>
-        🖤 acts mean but jealous<br>
-        🖤 biggest teddy bear
-      </p>
-    </div>
-    <button class="next-btn" onclick="nextPage()">→</button>
-  </div>
-
-  <!-- PAGE 4 -->
+  <!-- PAGE 3 QUIZ INTRO -->
   <div class="page quiz-intro">
     <div class="glass">
-      <h2>complete this quiz correctly.</h2>
+      <h2>complete this quiz correctly 💌</h2>
       <p>
-        answer all 3 correctly…<br>
-        and you get your valentine's gift 💌
+        answer all 3 correctly and you unlock your valentine's gift.
       </p>
     </div>
     <button class="next-btn" onclick="startQuiz()">start →</button>
   </div>
 
-  <!-- PAGE 5 QUIZ -->
+  <!-- PAGE 4 QUIZ -->
   <div class="page quiz-page">
-    <div class="glass" id="quizContainer">
-      <!-- JS inserts questions -->
+    <div class="glass" id="quizContainer"></div>
+  </div>
+
+  <!-- PAGE 5 LETTER -->
+  <div class="page letter-page">
+    <div class="letter">
+      <h2>happy valentine's day 💗</h2>
+      <img src="assets/uss.png" class="letter-img">
+      <p>
+        i miss us a lot.<br><br>
+        i can't wait to live with you.<br><br>
+        thode se din then we are gonna meet.<br><br>
+        and i am going to give you lots of kisses.<br><br>
+        love you mwah &lt;3
+      </p>
     </div>
   </div>
 
-</div>
-
-<!-- POPUP -->
-<div id="popup" class="popup hidden">
-  <div class="popup-content">
-    <img src="assets/us.png" class="popup-img">
-    <h2>happy valentine's day 💗</h2>
-    <p>
-      we are chaos + calm.<br>
-      we argue. we laugh. we rage bait.<br>
-      but we still choose each other.
-    </p>
-    <button onclick="closePopup()">close</button>
-  </div>
 </div>
 
 <script src="script.js"></script>
