@@ -22,6 +22,13 @@ body {
   align-items: center;
   flex-direction: column;
   position: relative;
+  text-align: center;
+}
+
+.start h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  cursor: pointer;
 }
 
 .next-btn {
@@ -35,30 +42,55 @@ body {
   cursor: pointer;
 }
 
-.couple-img {
-  width: 500px;
-  max-width: 85%;
-  margin-bottom: 20px;
-}
-
 .glass {
   backdrop-filter: blur(12px);
   background: rgba(255,255,255,0.08);
   padding: 30px;
   border-radius: 20px;
   max-width: 500px;
+}
+
+.intro-layout {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.mini-char {
+  width: 150px;
+}
+
+.quiz-page button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 15px;
+  background: #ff8bdc;
+  border: none;
+  cursor: pointer;
+}
+
+.letter {
+  background: rgba(255, 200, 230, 0.1);
+  backdrop-filter: blur(12px);
+  padding: 40px;
+  border-radius: 25px;
   text-align: center;
+  width: 500px;
+  max-width: 90%;
+  border: 3px solid pink;
+  box-shadow: 0 0 30px rgba(255, 150, 220, 0.5);
 }
 
-.fade-in {
-  animation: fadeIn 1.5s ease forwards;
+.letter-img {
+  width: 250px;
+  margin: 20px 0;
+  border-radius: 20px;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.95); }
-  to { opacity: 1; transform: scale(1); }
-}
-
+/* Floating hearts background */
 .hearts {
   position: fixed;
   width: 100%;
@@ -67,8 +99,7 @@ body {
   overflow: hidden;
 }
 
-.hearts::before,
-.hearts::after {
+.hearts::before {
   content: "💗 💕 💖 💓 💞";
   position: absolute;
   width: 200%;
@@ -79,32 +110,4 @@ body {
 @keyframes floatHearts {
   from { transform: translateY(100vh); }
   to { transform: translateY(-100vh); }
-}
-
-/* POPUP */
-.popup {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.popup-content {
-  background: #111;
-  padding: 30px;
-  border-radius: 20px;
-  text-align: center;
-  max-width: 400px;
-}
-
-.popup-img {
-  width: 250px;
-  margin-bottom: 20px;
-}
-
-.hidden {
-  display: none;
 }
