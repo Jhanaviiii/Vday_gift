@@ -18,14 +18,13 @@ body {
   height: 100vh;
   flex-shrink: 0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   position: relative;
-  text-align: center;
-  padding: 40px;
+  padding: 40px 20px;
   box-sizing: border-box;
-  overflow-y: auto; /* allow internal scroll if needed */
+  text-align: center;
 }
 
 .start h1 {
@@ -34,33 +33,38 @@ body {
   cursor: pointer;
 }
 
+/* FIXED NEXT BUTTON */
 .next-btn {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  padding: 12px 22px;
-  border-radius: 20px;
+  position: fixed;   /* changed from absolute */
+  bottom: 30px;
+  right: 30px;
+  padding: 12px 24px;
+  border-radius: 25px;
   background: #ff8bdc;
   border: none;
   cursor: pointer;
   color: black;
   font-weight: 500;
+  z-index: 999;
 }
 
+/* IMAGE */
 .couple-img {
   width: 420px;
   max-width: 90%;
   margin-bottom: 20px;
 }
 
+/* GLASS CARD */
 .glass {
   backdrop-filter: blur(12px);
-  background: rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.15);
   padding: 25px;
   border-radius: 20px;
   max-width: 600px;
 }
 
+/* INTRO LAYOUT */
 .intro-layout {
   display: flex;
   align-items: center;
@@ -74,11 +78,7 @@ body {
   width: 130px;
 }
 
-.quiz-page .glass {
-  width: 100%;
-  max-width: 500px;
-}
-
+/* QUIZ */
 .quiz-page button {
   display: block;
   width: 100%;
@@ -92,6 +92,7 @@ body {
   font-weight: 500;
 }
 
+/* LETTER */
 .letter {
   background: linear-gradient(145deg, #fff0f8, #ffd6f6);
   padding: 35px;
@@ -110,10 +111,7 @@ body {
   border-radius: 20px;
 }
 
-.letter h2 {
-  font-family: 'Playfair Display', serif;
-}
-
+/* HEARTS */
 .hearts {
   position: fixed;
   width: 100%;
