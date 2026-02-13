@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: 'Brush Script MT', cursive;
+  background: linear-gradient(to bottom, #ffd6f6, #000000);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.scene {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1.5s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.scene.active {
+  opacity: 1;
+}
+
+.text {
+  position: absolute;
+  top: 5%;
+  font-size: 2rem;
+  color: white;
+  text-shadow: 0 0 15px pink;
+}
+
+.characters {
+  position: relative;
+  display: flex;
+  gap: 60px;
+  align-items: flex-end;
+}
+
+.you {
+  width: 220px;
+  animation: dance 2s infinite ease-in-out;
+}
+
+.him {
+  width: 240px;
+  animation: laugh 3s infinite ease-in-out;
+}
+
+@keyframes dance {
+  0% { transform: translateY(0) rotate(-3deg); }
+  25% { transform: translateY(-15px) rotate(5deg); }
+  50% { transform: translateY(0) rotate(-5deg); }
+  75% { transform: translateY(-10px) rotate(3deg); }
+  100% { transform: translateY(0) rotate(-3deg); }
+}
+
+@keyframes laugh {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(3deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.final-text {
+  font-size: 3rem;
+  color: pink;
+  text-shadow: 0 0 20px white;
+}
