@@ -10,7 +10,7 @@ body {
   display: flex;
   width: 600vw;
   height: 100vh;
-  transition: transform 0.8s ease;
+  transition: transform 0.7s ease;
 }
 
 .page {
@@ -22,7 +22,7 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  padding: 40px 20px;
+  padding: 40px;
   box-sizing: border-box;
   text-align: center;
 }
@@ -33,57 +33,48 @@ body {
   cursor: pointer;
 }
 
-/* FIXED NEXT BUTTON */
 .next-btn {
-  position: fixed;   /* changed from absolute */
-  bottom: 30px;
-  right: 30px;
-  padding: 12px 24px;
-  border-radius: 25px;
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  padding: 12px 22px;
+  border-radius: 20px;
   background: #ff8bdc;
   border: none;
   cursor: pointer;
   color: black;
   font-weight: 500;
-  z-index: 999;
 }
 
-/* IMAGE */
 .couple-img {
   width: 420px;
   max-width: 90%;
   margin-bottom: 20px;
 }
 
-/* GLASS CARD */
-.glass {
-  backdrop-filter: blur(12px);
-  background: rgba(255,255,255,0.15);
+.card {
+  background: rgba(255,255,255,0.12);
   padding: 25px;
   border-radius: 20px;
-  max-width: 600px;
+  max-width: 500px;
 }
 
-/* INTRO LAYOUT */
-.intro-layout {
+.intro-row {
   display: flex;
   align-items: center;
   gap: 25px;
   margin-bottom: 30px;
-  flex-wrap: wrap;
-  justify-content: center;
 }
 
 .mini-char {
-  width: 130px;
+  width: 120px;
 }
 
-/* QUIZ */
 .quiz-page button {
   display: block;
   width: 100%;
-  margin: 12px 0;
-  padding: 14px;
+  margin: 10px 0;
+  padding: 12px;
   border-radius: 15px;
   background: #ff8bdc;
   border: none;
@@ -92,7 +83,6 @@ body {
   font-weight: 500;
 }
 
-/* LETTER */
 .letter {
   background: linear-gradient(145deg, #fff0f8, #ffd6f6);
   padding: 35px;
@@ -101,7 +91,7 @@ body {
   width: 500px;
   max-width: 95%;
   border: 3px solid #ff8bdc;
-  box-shadow: 0 0 40px rgba(255, 150, 220, 0.7);
+  box-shadow: 0 0 30px rgba(255,150,220,0.6);
   color: #5a0033;
 }
 
@@ -109,26 +99,4 @@ body {
   width: 220px;
   margin: 15px 0;
   border-radius: 20px;
-}
-
-/* HEARTS */
-.hearts {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  overflow: hidden;
-}
-
-.hearts::before {
-  content: "💗 💕 💖 💓 💞";
-  position: absolute;
-  width: 200%;
-  animation: floatHearts 15s linear infinite;
-  opacity: 0.12;
-}
-
-@keyframes floatHearts {
-  from { transform: translateY(100vh); }
-  to { transform: translateY(-100vh); }
 }
