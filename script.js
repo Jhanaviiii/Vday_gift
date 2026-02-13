@@ -49,13 +49,9 @@ function checkAnswer(selected) {
     if (qIndex < questions.length) {
       loadQuestion();
     } else {
-      document.getElementById("popup").classList.remove("hidden");
+      nextPage();
     }
   } else {
     alert("😠 incorrect.");
   }
-}
-
-function closePopup() {
-  document.getElementById("popup").classList.add("hidden");
 }
