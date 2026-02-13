@@ -1,48 +1,65 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>always your bbg 💗</title>
-<link rel="stylesheet" href="style.css">
-</head>
 <body>
 
-<div class="start-screen" onclick="startExperience()">
-  <div class="start-text">tap to start 💗</div>
+<div class="page start active" onclick="nextPage()">
+  <h1>tap to start 💗</h1>
 </div>
 
-<audio id="bgMusic" src="assets/love.mp3"></audio>
-
-<div class="container hidden">
-
-  <div class="frame active">
-    <img src="assets/you_idle.png" class="char left">
-    <img src="assets/him_beanie_laugh.png" class="char right">
+<div class="page intro">
+  <img src="assets/couple.png" class="couple-img">
+  <div class="text-box">
+    <h2>this is us.</h2>
+    <p>chaotic + calm. pink energy meets black hoodie softness.</p>
+    <button onclick="nextPage()">next →</button>
   </div>
+</div>
 
-  <div class="frame">
-    <img src="assets/you_bounce.png" class="char left">
-    <img src="assets/him_beanie_laugh.png" class="char right">
+<div class="page you-page">
+  <div class="char-section">
+    <img src="assets/you_bounce.png" id="youImg">
   </div>
-
-  <div class="frame">
-    <img src="assets/you_spin.png" class="char left">
-    <img src="assets/him_bandana_smile.png" class="char right">
+  <div class="text-box">
+    <h2>her.</h2>
+    <p>
+      ✨ high energy<br>
+      ✨ professional yapper<br>
+      ✨ randomly dances<br>
+      ✨ dramatic but soft<br>
+      ✨ pink coded
+    </p>
+    <button onclick="nextPage()">next →</button>
   </div>
+</div>
 
-  <div class="frame">
-    <img src="assets/you_jump.png" class="char left">
-    <img src="assets/him_bandana_smile.png" class="char right">
+<div class="page him-page">
+  <div class="char-section">
+    <img src="assets/him_beanie_idle.png" id="himImg">
   </div>
-
-  <div class="final-frame">
-    <div class="final-text">always your bbg</div>
+  <div class="text-box">
+    <h2>him.</h2>
+    <p>
+      🖤 gym guy energy<br>
+      🏀 basketball main character<br>
+      🖤 protective but shy<br>
+      🖤 gets jealous but pretends he doesn’t<br>
+      🖤 biggest teddy bear
+    </p>
+    <button onclick="nextPage()">next →</button>
   </div>
+</div>
 
+<div class="page quiz-page">
+  <h2>quick quiz 💌</h2>
+  <p>what does she do when she's bored?</p>
+  <button onclick="alert('correct. always dancing.')">dance randomly</button>
+  <button onclick="alert('wrong but cute guess.')">sleep</button>
+  <button onclick="alert('she does overthink but dancing wins.')">overthink</button>
+  <button onclick="nextPage()">skip →</button>
+</div>
+
+<div class="page final">
+  <img src="assets/couple.png" class="couple-img">
+  <h1 class="final-text">always your bbg</h1>
 </div>
 
 <script src="script.js"></script>
 </body>
-
-</html>
