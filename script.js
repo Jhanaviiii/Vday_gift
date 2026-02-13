@@ -1,10 +1,10 @@
-const pages = document.querySelectorAll(".page");
 let currentPage = 0;
+const slider = document.querySelector(".slider");
+const totalPages = 6;
 
 function nextPage() {
-  pages[currentPage].classList.remove("active");
-  currentPage++;
-  if (currentPage < pages.length) {
-    pages[currentPage].classList.add("active");
+  if (currentPage < totalPages - 1) {
+    currentPage++;
+    slider.style.transform = `translateX(-${currentPage * 100}vw)`;
   }
 }
