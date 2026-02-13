@@ -18,8 +18,8 @@ const questions = [
     correct: 2
   },
   {
-    q: "Who rage baits the other constantly?",
-    options: ["you", "me", "both", "no one"],
+    q: "Who rage baits the most?",
+    options: ["he does", "she does", "both do"],
     correct: 0
   },
   {
